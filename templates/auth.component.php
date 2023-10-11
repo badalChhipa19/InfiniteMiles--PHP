@@ -32,7 +32,7 @@ if (isset($_SESSION['role'])) {
           <label class="label label__role">Select role: </label>
           <select name="select__signup_role" id="role">
             <option value="customer">Customer</option>
-            <option value="agent">Agent</option>
+            <option value="agency">agency</option>
           </select>
         </div>
         <div class="button__box">
@@ -56,7 +56,7 @@ if (isset($_SESSION['role'])) {
           <label class="label label__role">Select role: </label>
           <select name="select__signin_role" id="role">
             <option value="customer">Customer</option>
-            <option value="agent">Agent</option>
+            <option value="agency">agency</option>
           </select>
         </div>
         <div class="button__box">

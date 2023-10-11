@@ -80,6 +80,7 @@
 }
 .goto{
   cursor: pointer;
+  text-decoration: underline;
   font-weight: normal;
   color: var(--font-main);
   font-size: 1.8rem;

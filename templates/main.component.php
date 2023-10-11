@@ -36,7 +36,7 @@ $result = result($query);
         $capacity = $row['vehiclecapacity'];
         $rent = $row['vehiclerent'];
         $carid = $row['id'];
-        $agent = $row['agentid'];
+        $agency = $row['agencyid'];
         ?>
 
         <div class="card">
@@ -84,7 +84,7 @@ $result = result($query);
               <input type="hidden" name="number" value="<?= $number ?>">
               <input type="hidden" name="capacity" value="<?= $capacity ?>">
               <input type="hidden" name="rent" value="<?= $rent ?>">
-              <input type="hidden" name="agent" value="<?= $agent ?>">
+              <input type="hidden" name="agency" value="<?= $agency ?>">
               <input type="date" class="input_rent" name="date" id="dateInput" required>
             </div>
             <div class="rent__input_box">

@@ -129,8 +129,9 @@
   align-items: center;
   justify-content: center;
 }
-.pagination__link{
-  border: 1px solid var(--btn-2);
+.pagination__link:link,
+.pagination__link:active{
+  border: 1px solid var(--link-2);
   padding: .4rem .8rem;
   border-radius: 50%;
 }

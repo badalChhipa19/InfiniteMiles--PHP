@@ -33,7 +33,7 @@
       </label>
       <ul class="nav__list list__shop">
         <?php if (isset($_SESSION['username'])): ?>
-          <?php if ($_SESSION['role'] === 'agent' && !pageVerification('/cars/admin')): ?>
+          <?php if ($_SESSION['role'] === 'agency' && !pageVerification('/cars/admin')): ?>
             <li class="nav__list_item" style="cursor: pointer;" onclick="location.href='/cars/admin';">Admin</li>
           <?php elseif ($_SESSION['role'] == 'customer' && !pageVerification('/cars/booking')): ?>
             <li class="nav__list_item" style="cursor: pointer;" onclick="location.href='/cars/booking';">My Booking</li>

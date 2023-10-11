@@ -1,5 +1,5 @@
 <?php
-if (isset($_SESSION) && $_SESSION['role'] === 'agent'):
+if (isset($_SESSION) && $_SESSION['role'] === 'agency'):
   ?>
   <section class='section__addcars'>
     <div class="heading__box">
@@ -21,8 +21,9 @@ if (isset($_SESSION) && $_SESSION['role'] === 'agent'):
           </thead>
           <!--//TODO: Getting data form server-->
           <?php
-          $agent_id = $_SESSION['id'];
-          $query = "SELECT * FROM vehicle WHERE agentid = $agent_id";
+
+          $agency_id = $_SESSION['id'];
+          $query = "SELECT * FROM vehicle WHERE agencyid = $agency_id";
           $result = result($query);
           $count = 0;
           while ($row = mysqli_fetch_assoc($result)): ?>
@@ -60,7 +61,7 @@ if (isset($_SESSION) && $_SESSION['role'] === 'agent'):
         </table>
 
         <?php
-        $query_for_car_booked = "SELECT * FROM bookings WHERE agentid = '$agent_id'";
+        $query_for_car_booked = "SELECT * FROM bookings WHERE agencyid = '$agency_id'";
         $result_for_car_booked = result($query_for_car_booked);
         if (mysqli_num_rows($result_for_car_booked) > 0):
           ?>

@@ -1,7 +1,7 @@
 <?php include(__DIR__ . "/../functions/functions.php") ?>
 <?php session_start() ?>
 <?php
-if (isset($_SESSION['role']) && $_SESSION['role'] == 'agent') {
+if (isset($_SESSION['role']) && $_SESSION['role'] == 'agency') {
   alert('Login as customer to book a ride.', "/cars/");
 } else if (!isset($_SESSION['role'])) {
   alert('Login as customer to book a ride.', "/cars/authentication");
@@ -13,11 +13,11 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'agent') {
     $rent = $_POST['rent'];
     $days = $_POST['days'];
     $date = $_POST['date'];
-    $agent = $_POST['agent'];
+    $agency = $_POST['agency'];
     $customer = $_SESSION['id'];
     $name = $_SESSION['username'];
 
-    $query = "INSERT INTO bookings(vehiclemodel, vehiclenumber, vehiclecapacity, vehiclerent, agentid, date, day, customerid, customername) VALUES('$model', '$number', '$capacity', '$rent', '$agent', '$date', '$days', '$customer', '$name')";
+    $query = "INSERT INTO bookings(vehiclemodel, vehiclenumber, vehiclecapacity, vehiclerent, agencyid, date, day, customerid, customername) VALUES('$model', '$number', '$capacity', '$rent', '$agency', '$date', '$days', '$customer', '$name')";
     $result = result($query);
 
     alert('Booking confirmed.', '/cars/booking');
