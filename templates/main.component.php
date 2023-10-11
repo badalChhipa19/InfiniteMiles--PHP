@@ -1,5 +1,4 @@
 <?php
-
 //TODO: Getting vehicles count
 $query_for_count = "SELECT * FROM vehicle";
 $result_for_count = result($query_for_count);
@@ -23,9 +22,7 @@ $result = result($query);
 
 ?>
 <section class="section__cards">
-  <div class="headin__primary_container">
-    <h1 class="headin__primary">Choose a ride now</h1>
-  </div>
+  <h1 class="heading__primary heading__primary-big">Book Your Ride</h1>
   <div class="cards__container">
     <?php
     //? Checking If no vehicle avlebal
@@ -38,16 +35,20 @@ $result = result($query);
         $number = $row['vehiclenumber'];
         $capacity = $row['vehiclecapacity'];
         $rent = $row['vehiclerent'];
+        $carid = $row['id'];
+        $agent = $row['agentid'];
         ?>
+
         <div class="card">
           <div class="card__texts">
             <div class="card__text_box card__text_box-model">
-              <p class="card__text card__model">
+              <h2 class="card__model heading__secondary">
                 <?= $model ?>
-              </p>
+              </h2>
             </div>
             <div class="card__text_box">
               <p class="card__text card__number">
+
                 <?= $number ?>
               </p>
             </div>
@@ -63,20 +64,46 @@ $result = result($query);
             </div>
           </div>
 
-          <form action="" class="rent__car_container">
-            <select name="days" class="rent__input_box input_rent" id="select__days">
-              <?php for ($i = 1; $i <= 7; $i++): ?>
-                <option value="'<?= $i ?>'">
-                  <?= $i ?>
-                </option>
-              <?php endfor; ?>
+          <form action="./formactions/bookcar.action.php" class="rent__car_container" method="POST">
+            <hr />
+            <select name="days" class="rent__input_box input_rent" id="days">
+              <?php for ($i = 1; $i <= 7; $i++):
+                if ($i == 1): ?>
+                  <option value="<?= $i ?>">
+                    <?= $i ?> day
+                  </option>
+                <?php else: ?>
+                  <option value="<?= $i ?>">
+                    <?= $i ?> days
+                  </option>
+                <?php endif; endfor; ?>
             </select>
             <hr />
             <div class="rent__input_box">
-              <input type="date" class="input_rent" name="" id="">
+              <input type="hidden" name="model" value="<?= $model ?>">
+              <input type="hidden" name="number" value="<?= $number ?>">
+              <input type="hidden" name="capacity" value="<?= $capacity ?>">
+              <input type="hidden" name="rent" value="<?= $rent ?>">
+              <input type="hidden" name="agent" value="<?= $agent ?>">
+              <input type="date" class="input_rent" name="date" id="" required>
             </div>
             <div class="rent__input_box">
-              <a href="#" type="submit" class="btn btn__book">Rent Car 👉</a>
+              <?php
+              $query_for_checking = "SELECT * FROM bookings WHERE vehiclenumber = '$number'";
+              $result_for_checking = result($query_for_checking);
+              $booked = mysqli_num_rows($result_for_checking);
+              ?>
+              <button class="btn__box <?php if ($booked > 0) {
+                echo "btn__booked";
+              } ?> " type="submit" name="book_car">
+                <p class="btn btn__book">
+                  <?php if ($booked > 0) {
+                    echo "Booked";
+                  } else {
+                    echo "Rent Car";
+                  } ?>
+                </p>
+              </button>
             </div>
           </form>
         </div>
@@ -87,7 +114,12 @@ $result = result($query);
     <ul class="pagination">
       <?php
       for ($i = 1; $i <= $pageCount; $i++) {
-        echo "<li class='pagination__link'><a href='/cars?page={$i}'>{$i}</a></li>";
+        if ($i == $limit) {
+          $active = 'active__page';
+        } else {
+          $active = '';
+        }
+        echo "<li class='pagination__item'><a class='pagination__link  $active' href='/cars?page={$i}'>{$i}</a></li>";
       }
       ?>
     </ul>

@@ -35,16 +35,7 @@
   position: relative;
   perspective: 150rem;
 }
-.forms__container * .heading__box{
-  background-image: linear-gradient(to left top, var(--burgundy-main), var(--blue-main));
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-.forms__container * h1{
-  font-size: 4.6rem;
-  text-align: center;
-  color: transparent;
-}
+
 .form{
   display: flex;
   flex-direction: column;

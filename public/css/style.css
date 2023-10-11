@@ -14,7 +14,8 @@
   --gray-light: #333333;
   --gray-dark: #212529;
 
-  --bg-main: #000000;
+  /* --bg-main: #000000; */
+  --bg-main: #131010;
   --bg-main-rgb: 0, 0, 0;
   
   --btn-main: #008080;
@@ -24,6 +25,9 @@
 
   --heading:  #FFFACD;
   --heading-rgb:  255, 250, 205;
+
+  --link: #87CEEB;
+  --link-2: #98FB98;
 }
 
 html {
@@ -49,12 +53,11 @@ body {
 
 a:link,
 a:active{
-  color: var(--burgundy-main);
+  color: var(--link);
   text-decoration: none;
-  /* display: block; */
 }
 a:hover{
-  color: var(--blue-main);
+  color: var(--link-2);
 }
 
 .heading__primary{
@@ -68,4 +71,10 @@ a:hover{
 .heading__primary-mid{
   font-size: 4.6rem;
   margin-bottom: 4rem;
+}
+.heading__secondary{
+  color: var(--gray-dark);
+  font-size: 3.8rem;
+  font-weight: 800;
+  padding: .6rem .8rem;
 }

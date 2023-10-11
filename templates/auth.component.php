@@ -19,7 +19,7 @@ if (isset($_SESSION['role'])) {
     <!-- //TODO: Sign IN form -->
     <div class="card front">
       <div class="heading__box">
-        <h1 class="heading__primary">Sign up now</h1>
+        <h1 class="heading__primary heading__primary-mid">Sign up now</h1>
       </div>
       <form action="formactions/registration.action.php" method="POST" class="form form__signup">
         <?php inputBox('label__name_signup', 'signup__name', 'text', 'input__name_signup', 'Enter full name') ?>
@@ -46,7 +46,7 @@ if (isset($_SESSION['role'])) {
     <!-- //TODO: SignUp Form -->
     <div class="card back">
       <div class="heading__box">
-        <h1 class='heading__primary'>Sign In</h1>
+        <h1 class='heading__primary heading__primary-mid'>Sign In</h1>
       </div>
       <form class="form form__signin" action='formactions/login.action.php' method="POST">
         <?php inputBox('label__username_signin', 'signin__name', 'text', 'input__name__signin', 'Enter email or mobile number', 'domy@mail') ?>
