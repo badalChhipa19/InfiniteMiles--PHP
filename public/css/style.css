@@ -63,6 +63,7 @@ a:hover{
 .heading__primary{
   color: var(--heading);
   text-align: center;
+  user-select: none;
 }
 .heading__primary-big{
   font-size: 5.8rem;
@@ -73,6 +74,7 @@ a:hover{
   margin-bottom: 4rem;
 }
 .heading__secondary{
+  user-select: none;
   color: var(--gray-dark);
   font-size: 3.8rem;
   font-weight: 800;

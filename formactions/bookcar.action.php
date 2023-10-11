@@ -17,7 +17,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == 'agent') {
     $customer = $_SESSION['id'];
     $name = $_SESSION['username'];
 
-    $query = "INSERT INTO bookings(vehiclemodel, vehiclenumber, vehiclecapacity, vehiclerent, agentid, date, day, customerid, customername) VALUES('$model', '$number', '$capacity', '$rent', '$days', '$date', '$agent', '$customer', '$name')";
+    $query = "INSERT INTO bookings(vehiclemodel, vehiclenumber, vehiclecapacity, vehiclerent, agentid, date, day, customerid, customername) VALUES('$model', '$number', '$capacity', '$rent', '$agent', '$date', '$days', '$customer', '$name')";
     $result = result($query);
 
     alert('Booking confirmed.', '/cars/booking');

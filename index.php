@@ -14,5 +14,7 @@ elseif (pageVerification('/cars/cart'))
   include "views/cart.view.php";
 elseif (pageVerification('/cars/admin'))
   include "views/admin.view.php";
-else
+elseif (pageVerification('/cars/booking')) {
+  include "views/booking.view.php";
+} else
   include "views/4o4.view.php";

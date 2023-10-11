@@ -23,7 +23,7 @@
     </ul>
 
     <!--//TODO: Links for shop Page-->
-  <?php elseif (pageVerification("/cars/") || pageVerification("/cars/admin")): ?>
+  <?php elseif (pageVerification("/cars/") || pageVerification("/cars/admin") || pageVerification("/cars/booking")): ?>
     <div class="abstract__container">
       <input type="checkbox" id="abstract__checkbox">
       <label for="abstract__checkbox" class="abstract__nav">
@@ -33,9 +33,14 @@
       </label>
       <ul class="nav__list list__shop">
         <?php if (isset($_SESSION['username'])): ?>
-          <?php if ($_SESSION['role'] === 'agent' && !pageVerification('/cars/addcar')): ?>
+          <?php if ($_SESSION['role'] === 'agent' && !pageVerification('/cars/admin')): ?>
             <li class="nav__list_item" style="cursor: pointer;" onclick="location.href='/cars/admin';">Admin</li>
+          <?php elseif ($_SESSION['role'] == 'customer' && !pageVerification('/cars/booking')): ?>
+            <li class="nav__list_item" style="cursor: pointer;" onclick="location.href='/cars/booking';">My Booking</li>
+          <?php elseif (!pageVerification('/cars/')): ?>
+            <li class="nav__list_item" style="cursor: pointer;" onclick="location.href='/cars/';">Home</li>
           <?php endif; ?>
+
           <li class="nav__list_item" style="cursor: pointer;"
             onclick="location.href='/cars/formactions/logout.action.php';">Sign
             out</li>
