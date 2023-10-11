@@ -3,7 +3,7 @@
   max-width: 192rem;
   margin: 0 auto;
   padding: 5rem 10rem;
-  background-image: linear-gradient(to right top, var(--burgundy-main), var(--blue-main));
+  background-image: linear-gradient(to right top, var(--gray-light), var(--gray-dark));
 }
 
 /*? Products Container  */

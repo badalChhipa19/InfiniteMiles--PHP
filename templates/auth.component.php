@@ -9,8 +9,9 @@ if (isset($_SESSION['role'])) {
     <div class="text__title_box">
       <h1 class="heading__primary heading__primary-mid">This is somthig you will love to choose.</h1>
     </div>
-    <p class="auth__text">Whit tripees make your trip more confort then your last one. We do care about your moments, So
-      you don't have to worry about roads anymore. Just go-with-flow with TRIPEES</p>
+    <p class="auth__text">Whit InfiniteMiles make your trip more confort then your last one. We do care about your
+      moments, So
+      you don't have to worry about roads anymore. Just go-with-flow with INFINITEMILER</p>
     <?php customButton("div", '#', 'Start now &rarr;', '', 'button__burgundy signInButton') ?>
   </section>
 
@@ -25,8 +26,8 @@ if (isset($_SESSION['role'])) {
         <?php inputBox('label__name_signup', 'signup__name', 'text', 'input__name_signup', 'Enter full name') ?>
         <?php inputBox('label__email_signup', 'signup__email', 'email', 'input__email_signup', 'Enter email address') ?>
         <?php inputBox('label__mobile_signup', 'signup__mobile', 'tel', 'input__mobile_signup', 'Enter mobile number') ?>
-        <?php inputBox('label__password_signup', 'signup__password', 'password', 'input__password_signup', 'Enter a password', '456456') ?>
-        <?php inputBox('label__cPassword_signup', 'signup__cPassword', 'password', 'input__cPassword_signup', 'Enter confirm password', '456456') ?>
+        <?php inputBox('label__password_signup', 'signup__password', 'password', 'input__password_signup', 'Enter a password') ?>
+        <?php inputBox('label__cPassword_signup', 'signup__cPassword', 'password', 'input__cPassword_signup', 'Enter confirm password') ?>
         <div class="role">
           <label class="label label__role">Select role: </label>
           <select name="select__signup_role" id="role">
@@ -49,8 +50,8 @@ if (isset($_SESSION['role'])) {
         <h1 class='heading__primary heading__primary-mid'>Sign In</h1>
       </div>
       <form class="form form__signin" action='formactions/login.action.php' method="POST">
-        <?php inputBox('label__username_signin', 'signin__name', 'text', 'input__name__signin', 'Enter email or mobile number', 'domy@mail') ?>
-        <?php inputBox('label__password_signin', 'signin__password', 'password', 'input__password_signin', 'Enter password', '456456') ?>
+        <?php inputBox('label__username_signin', 'signin__name', 'text', 'input__name__signin', 'Enter email or mobile number') ?>
+        <?php inputBox('label__password_signin', 'signin__password', 'password', 'input__password_signin', 'Enter password') ?>
         <div class="role">
           <label class="label label__role">Select role: </label>
           <select name="select__signin_role" id="role">

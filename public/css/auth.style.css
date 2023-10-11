@@ -1,10 +1,10 @@
 .auth__container{
-  background-image:linear-gradient(to right bottom, var(--bg-main), rgba(var(--burgundy-main-rgb), .3) ), url("https://images.unsplash.com/photo-1612069811748-d3b2d1db1858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2077&q=80");
+  background-image:url("https://images.unsplash.com/photo-1511994477422-b69e44bd4ea9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1979&q=80");
   background-blend-mode: color;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
   justify-content: space-around;
   align-items: center;
   height: 90vh;
@@ -42,8 +42,7 @@
   gap: 1rem;
 }
 .card{
-  background-image: linear-gradient(to right bottom, rgba(var(--bg-main-rgb), .6), rgba(var(--bg-main-rgb), .6)); 
-  /* background-color: var(--bg-main); */
+  backdrop-filter: brightness(60%) blur(2px);
   padding: 4rem 1rem 6rem 1rem;
   display: flex;
   flex-direction: column;
@@ -68,24 +67,21 @@
 }
 .submit__button{
   margin: 0;
-  background-color: rgba(var(--blue-main-rgb), .8);
-  color: var(--bg-main);
-  box-shadow: 2px 2px .5rem 2px rgba(var(--burgundy-main-rgb), .3);
+  font-family: var(--font-heading);
+  background-color: rgba(var(--link-2-rgb), .8);
+  color: var(--gray-dark);
+  box-shadow: 2px 2px .5rem 2px rgba(var(--link-rgb), .3);
+  font-weight: 500;
 }
 .submit__button:hover{
-  background-color: rgba(var(--blue-main-rgb), .8);
+  background-color: rgba(var(--link-2-rgb), .8);
   color: var(--bg-main);
-  box-shadow: 3px 3px .6rem 3px rgba(var(--burgundy-main-rgb), .4);
-}
-.submit__button:active{
-  opacity: .9;
-  background-color: rgba(var(--blue-main-rgb), .8);
-  color: var(--bg-main);
-  box-shadow: 1px 3px .5rem 3px rgba(var(--burgundy-main-rgb), .2);
+  box-shadow: 3px 3px .6rem 3px rgba(var(--link-rgb), .4);
 }
 .goto{
   cursor: pointer;
-  color: var(--burgundy-main);
+  font-weight: normal;
+  color: var(--font-main);
   font-size: 1.8rem;
   font-weight: bold;
 }
@@ -93,6 +89,16 @@
   transform: translateY(-1px) scale(.99);
   opacity: .9;
   user-select: none;
+}
+.label__role{
+  color: var(--link-2);
+}
+#role{
+  font-size: inherit;
+  padding: .4rem .6rem;
+  cursor: pointer;
+  background-color: var(--bg-main);
+  color: var(--font-main);
 }
 
 /*TODO: Form Rotate */

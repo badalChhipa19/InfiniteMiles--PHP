@@ -40,3 +40,10 @@
   margin-top: 2rem;
   width: fit-content;
 }
+
+.btn__box{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  /* justify-content: space-between; */
+}

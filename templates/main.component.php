@@ -85,7 +85,7 @@ $result = result($query);
               <input type="hidden" name="capacity" value="<?= $capacity ?>">
               <input type="hidden" name="rent" value="<?= $rent ?>">
               <input type="hidden" name="agent" value="<?= $agent ?>">
-              <input type="date" class="input_rent" name="date" id="" required>
+              <input type="date" class="input_rent" name="date" id="dateInput" required>
             </div>
             <div class="rent__input_box">
               <?php
@@ -124,5 +124,13 @@ $result = result($query);
       ?>
     </ul>
 </section>
+
+<script>
+  // Get the current date in the format yyyy-mm-dd
+  const today = new Date().toISOString().split('T')[0];
+
+  // Set the default value of the date input to today
+  document.querySelectorAll('#dateInput').forEach(el => el.value = today)
+</script>
 
 <link rel="stylesheet" href="public/css/main.style.css">

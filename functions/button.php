@@ -1,12 +1,12 @@
 <?php
-function customButton($parentTagName, $location, $content, $parentClass, $buttonType = '', $name = '', $value = '')
+function customButton($parentTagName, $location, $content, $parentClass, $buttonType = '', $name = '', $type = 'submit')
 {
   ?>
 
   <<?= $parentTagName ?> class="button__container
     <?= $parentClass ?> ">
     <button class="button <?= $buttonType ?>" data-set="<?= $content ?>" onclick="parent.location = '<?= $location ?>'"
-      name='<?= $name ?>' value='<?= $value ?>'>
+      name='<?= $name ?>' type=<?= $type ?>>
       <?= $content ?>
     </button>
   </<?= $parentTagName ?>>
