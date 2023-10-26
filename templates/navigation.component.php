@@ -17,28 +17,29 @@
 
     <!--//TODO: Links for shop Page-->
   <?php elseif (pageVerification("/cars/") || pageVerification("/cars/admin") || pageVerification("/cars/booking")): ?>
-    <div class="abstract__container">
+    <div class="links">
       <input type="checkbox" id="abstract__checkbox">
-      <label for="abstract__checkbox" class="abstract__nav">
+      <label for="abstract__checkbox" class="links__menu">
         <li class='abstract__list'>
           <div class="line mid__line"></div>
         </li>
       </label>
-      <ul class="nav__list list__shop">
+
+      <ul class="links__list links__shop">
         <?php if (isset($_SESSION['username'])): ?>
           <?php if ($_SESSION['role'] === 'agency' && !pageVerification('/cars/admin')): ?>
-            <li class="nav__list_item" style="cursor: pointer;" onclick="location.href='/cars/admin';">Admin</li>
+            <li class="links__item" style="cursor: pointer;" onclick="location.href='/cars/admin';">Admin</li>
           <?php elseif ($_SESSION['role'] == 'customer' && !pageVerification('/cars/booking')): ?>
-            <li class="nav__list_item" style="cursor: pointer;" onclick="location.href='/cars/booking';">My Booking</li>
+            <li class="links__item" style="cursor: pointer;" onclick="location.href='/cars/booking';">My Booking</li>
           <?php elseif (!pageVerification('/cars/')): ?>
-            <li class="nav__list_item" style="cursor: pointer;" onclick="location.href='/cars/';">Home</li>
+            <li class="links__item" style="cursor: pointer;" onclick="location.href='/cars/';">Home</li>
           <?php endif; ?>
 
-          <li class="nav__list_item" style="cursor: pointer;"
+          <li class="links__item" style="cursor: pointer;"
             onclick="location.href='/cars/formactions/logout.action.php';">Sign
             out</li>
         <?php else: ?>
-          <li class="nav__list_item"><a href="/cars/authentication">Sign-in</a></li>
+          <li class="links__item"><a href="/cars/authentication">Sign-in</a></li>
         <?php endif; ?>
       </ul>
     </div>

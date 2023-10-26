@@ -1,14 +1,21 @@
 .navigation
   background-color: $transparent-gray
+  width: 100%
+  display: flex
+  position: fixed
 
   &__bar
-    margin: 0 auto
-    max-width: 145rem
     display: flex
+    justify-content: space-between
+    align-items: center
+    @include maxsize
     padding: 2rem 4rem
 
   .logo
-    max-height: 5rem
+    height: 5rem
+    display: flex
+    align-items: center
+    justify-content: center
 
     &__image,
     &__image_small
@@ -16,3 +23,25 @@
     
     &__image_small
       display: none
+
+  .links
+    #abstract__checkbox
+      display: none
+
+    &__menu
+      display: none
+
+    &__list
+      display: flex;
+      gap: 2rem
+      list-style: none
+      justify-content: space-between
+
+    &__item
+      font-size: 2rem
+      color: $yellow
+      transition: transform .3s ease-in-out, opacity .3s ease-in-out
+
+      &:hover
+        transform: scale(1.05)
+        opacity: .7
