@@ -148,7 +148,6 @@ if (isset($_SESSION) && $_SESSION['role'] === 'agency'):
     </div>
   </section>
 
-  <link rel="stylesheet" href="public/css/admin.style.css">
 <?php else:
   locate('/cars/');
 endif; ?>

@@ -73,5 +73,4 @@ if (isset($_SESSION['role'])) {
   </section>
 </div>
 
-<link rel="stylesheet" href="public/css/auth.style.css" />
 <script src='public/js/auth.script.js'></script>

@@ -88,8 +88,6 @@
           ?>
       </section>
 
-      <link rel="stylesheet" href="public/css/main.style.css">
-      <link rel="stylesheet" href="public/css/booking.style.css">
       <?php
   else:
     alert('No Booking Yet! Book now', '/cars/');

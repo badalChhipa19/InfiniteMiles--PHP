@@ -1,97 +1,31 @@
-  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Lora:ital,wght@1,600;1,700&family=Noto+Serif+Display:wght@300;400&display=swap');
-:root {
-  --blue-main: #001f3f;
-  --blue-main-rgb: 0, 31, 63;
-  --burgundy-main: #800000;
-  --burgundy-main-rgb: 128, 0, 0 ;
-  
-  --font-main: #fffff0;
-  --font-main-rgb: 255, 255, 240;
-  
-  --gray-light: #333333;
-  --gray-dark: #212529;
-
-  /* --bg-main: #000000; */
-  --bg-main: #131010;
-  --bg-main-rgb: 0, 0, 0;
-  
-  --btn-main: #008080;
-  --btn-main-rgb: 0, 128, 128;
-  --btn-2: #FFFFF0;
-  --btn-2-rgb: 255, 255, 240;
-
-  --heading:  #FFFACD;
-  --heading-rgb:  255, 250, 205;
-
-  --link: #87CEEB;
-  --link-rgb: 135, 206, 235;
-  --link-2: #98FB98;
-  --link-2-rgb: 152, 251, 152;
-
-  --font-heading: 'Lora', serif;
-  --font-text: 'Libre Baskerville', serif;
-  --font-text-2: 'Noto Serif Display', serif;
-
-}
-
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 *,
-*::before,
-*::after {
-  margin: 0;
+*:after,
+*:before {
   padding: 0;
-  box-sizing: inherit;
-}
+  margin: 0;
+  box-sizing: inherit; }
 
 body {
+  background-color: #17171a;
+  margin: 0 auto;
   font-size: 1.6rem;
-  line-height: 1.5;
-  color: var(--font-main);
-  background-color: var(--bg-main);
-  position: relative;
-  font-family: var(--font-text-2);
-  font-weight: bold;
-  letter-spacing: 1px;
-}
+  color: #f8f9fa;
+  line-height: 1.5; }
 
-a:link,
-a:active{
-  color: var(--link);
-  text-decoration: none;
-}
-a:hover{
-  color: var(--link-2);
-}
-
-.heading__primary{
-  font-family: var(--font-heading);
-  color: var(--heading);
-  text-align: center;
-  user-select: none;
-}
-.heading__primary-big{
-  font-size: 5.8rem;
-  margin-bottom: 4rem;
-}
-.heading__primary-mid{
-  font-size: 4.6rem;
-  margin-bottom: 4rem;
-}
-.heading__secondary{
-  font-family: var(--font-heading);
-  user-select: none;
-  color: var(--gray-dark);
-  font-size: 3.8rem;
-  font-weight: 800;
-  padding: .6rem .8rem;
-}
-.heading__tertiary{
-  font-family: var(--font-heading);
-  font-size: 3.4rem;
-  text-align: left;
-  margin-bottom: 3rem;
-}
+.navigation {
+  background-color: #17171a44; }
+  .navigation__bar {
+    margin: 0 auto;
+    max-width: 145rem;
+    display: flex;
+    padding: 2rem 4rem; }
+  .navigation .logo {
+    max-height: 5rem; }
+    .navigation .logo__image, .navigation .logo__image_small {
+      height: 100%; }
+    .navigation .logo__image_small {
+      display: none; }

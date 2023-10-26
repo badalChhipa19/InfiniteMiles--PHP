@@ -1,19 +1,12 @@
 <?php $url = $_SERVER['REQUEST_URI'] ?>
 <!--//! Navbar Start-->
-<nav class="navigation__bar">
-  <!--//TODO: Logo-->
-  <div class="nav__logo_box" onclick="parent.location='/cars/'">
-    <img class="logo__image" src="public/images/main/logo.png" alt="Logo Image">
-    <img class="logo__image-1" src="public/images/main/favicon.png" alt="Logo Image">
+<div class="navigation">
+  <nav class="navigation__bar">
+    <!--//TODO: Logo-->
+  <div class="logo" onclick="parent.location='/cars/'">
+    <img class="logo__image" src="public/images/logo.png" alt="Logo Image">
+    <img class="logo__image_small" src="public/images/favicon.png" alt="Logo Image">
   </div>
-
-  <!--//TODO: Search box-->
-  <?php if (pageVerification('/cars/')): ?>
-    <div class="product__searchbox">
-      <input class="searchbox" type="search" name="productSearch" id="productSearch">
-      <ion-icon class="searchbox__icon" name="search-outline"></ion-icon>
-    </div>
-  <?php endif ?>
 
   <!--//TODO: Links for authentication Page-->
   <?php if (pageVerification("/cars/authentication")): ?>
@@ -50,6 +43,5 @@
       </ul>
     </div>
   <?php endif ?>
-</nav>
-
-<link rel="stylesheet" href="public/css/navigation.style.css">
+  </nav>
+</div>

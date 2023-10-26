@@ -5,7 +5,7 @@
     <section class="footer__cols">
       <ul class="about__list list">
         <li class="col__item footer__logo" onclick="parent.location='/cars/'" style="cursor: pointer;">
-          <img src="public/images/main/logo.png" alt="">
+          <img src="public/images/logo.png" alt="">
         </li>
         <li class="col__item">&copy;
           <script>document.write(new Date().getFullYear())</script> www.picme.com. All rights are reserved.
@@ -92,5 +92,4 @@
     </section>
   </div>
 
-  <link rel="stylesheet" href="public/css/bottom.style.css">
 </div>

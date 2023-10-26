@@ -132,5 +132,3 @@ $result = result($query);
   // Set the default value of the date input to today
   document.querySelectorAll('#dateInput').forEach(el => el.value = today)
 </script>
-
-<link rel="stylesheet" href="public/css/main.style.css">

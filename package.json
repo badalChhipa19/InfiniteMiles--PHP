@@ -1,0 +1,22 @@
+{
+  "name": "cars",
+  "version": "1.0.0",
+  "description": "A car rental agency website",
+  "main": "index.php",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.sass public/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badalChhipa19/infinitemiles--PHP.git"
+  },
+  "author": "Badal Chhipa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/badalChhipa19/infinitemiles--PHP/issues"
+  },
+  "homepage": "https://github.com/badalChhipa19/infinitemiles--PHP#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

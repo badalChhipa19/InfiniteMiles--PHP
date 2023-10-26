@@ -1,8 +1,0 @@
-.section__booking{
-  min-height: 90vh;
-}
-
-.section__cards{
-  background-image: none;
-  background-color: var(--gray--light) !important;
-}
